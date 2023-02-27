@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>Ayo duck!</title>
+
+    <style>
+        body {
+            font-family: Courier, monospace;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Ducks be ducking yo!
+    </h1>
+
+    <img onclick = "clickIncrement()"
+        src="https://i.kym-cdn.com/photos/images/original/002/429/796/96c.gif"
+        height="482"
+        width="498"
+        title="Shuba">
+    
+    <p>You have clicked the duck <b>0</b> time(s)!</p>
+
+    <script>
+        const increment = (function() {
+            let counter = 0;
+            return function() {counter += 1; return counter}
+
+        })();
+
+        function clickIncrement() {
+            document.getElementsByTagName("b")[0].innerHTML = increment();
+        }
+
+    </script>
+</body>
+</html>
